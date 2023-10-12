@@ -5,14 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My City</title>
     <style>
-        .main{
-            align-content: center;
+        
+        #blink{
+            color:green;
+            font-size:x-large;
+        }
+        hr{
+            margin-left: 90px;
+            margin-right: 90px;
+        }
+        ul{
+            color: rgb(236, 103, 225);
+            list-style: none;
+            font-size: larger;
+            font-style: italic;
+        }
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: xx-large;
         }
     </style>
 </head>
 <body>
-    <div class="main">
-        <h1 style="color: blue">Pondicherry</h1>
+    <div class="main" align="center">
+        <h1 style="color: blue">Pondicherry</h1><hr>
+        <ul align="center">
+            <li>1. Rock Beach</li>
+            <li>2. Aravind Ashram</li>
+            <li>3. White Town</li>
+        </ul>
+        <br><br>
+        <p align="center"><span id="blink">PONDICHERRY  UNIVERSITY</span> </p>
+    <br>
+
+    <script>
+        var blink = document.getElementById("blink");
+        setInterval(function () {
+                    if (blink.style.opacity == 0) {
+                        blink.style.opacity = 2;
+                    } 
+                    else {
+                        blink.style.opacity = 0;
+                    }
+                    }, 1000);
+    </script>
+
+    <h3><marquee behavior="scroll" direction="left">Welcome to Pondicherry</marquee></h3>
+
     </div>
 </body>
 </html>
