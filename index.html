@@ -4,32 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Exercises</title>
+    <style>
+        *{
+            font-family: Cambria;
+            text-align: center;
+            justify-content: center;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body{
+            width: 80%;   
+            margin: 5% 10%;
+        }       
+        ul{  list-style: none; }
+        ul hr{
+            width: 90%;
+        }
+        li {
+            list-style: none;
+        }
+        .title{ 
+            background-color: rgba(205, 50, 91, 0.824);
+            padding-top: 7px;
+            color: white;
+        }
+        button{
+            text-decoration: none;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        .tog{
+            font-size: large;
+            padding: 3px;
+            font-weight: 600;
+        }
+        a{
+            text-decoration: none;
+            color: rgba(154, 8, 81, 0.797);
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+    </style>
     
 </head>
 <body>
-    <h1 align="center">All Web-Tech Lab Excersies</h1>
-    <ul>
-        <li>Lab Day1&2 (Assesment 1)</li>
-        <ol type="1">
-            <li><a href="LAB1/Blink_WARNING.html" target="_blank" >Blink WARNING! </a></li>
-            <li><a href="LAB1/Colour_form.html" target="_blank">Color Form </a></li>
-            <li><a href="LAB1/Population_list.html" target="_blank">Population list </a></li>
-            <li><a href="LAB1/Registration_form.html" target="_blank" >Registration Form </a></li>
-            <li><a href="LAB1/Sentence_Styles.html" target="_blank">Sentences with diff styles</a></li>
-            <li><a href="LAB1/Small_3frames.html" target="_blank">Small 3 frame </a></li>
-            <li><a href="LAB1/square_form.html" target="_blank">One Square Form </a></li>
-        </ol>
-    </ul>
+                <div class="title"><h1 align="center">All Web-Tech Lab Excersies</h1><hr></div>
+                
+                <ul>
+                    <li><button class="tog">Lab Day 1 & 2 (Assesment 1)</button></li><hr>
+                    <div class="hiddenDiv2" style="display: none;">
+                        <ol type="1">
+                            <li><a href="LAB1/Blink_WARNING.html" target="_blank" >Blink WARNING! </a></li>
+                            <li><a href="LAB1/Colour_form.html" target="_blank">Color Form </a></li>
+                            <li><a href="LAB1/Population_list.html" target="_blank">Population list </a></li>
+                            <li><a href="LAB1/Registration_form.html" target="_blank" >Registration Form </a></li>
+                            <li><a href="LAB1/Sentence_Styles.html" target="_blank">Sentences with diff styles</a></li>
+                            <li><a href="LAB1/Small_3frames.html" target="_blank">Small 3 frame </a></li>
+                            <li><a href="LAB1/square_form.html" target="_blank">One Square Form </a></li>
+                        </ol><hr>
+                    </div>          
+                    
+                    <li><button class="tog">Lab Day 3 (Assesment 2)</button></li><hr>   
+                    <div class="hiddenDiv2" style="display: none;">
+                        <ol type="1">
+                            <li><a href="LAB2/DEPARTMENTALSTORE.HTML" target="_blank">Departmental store form </a></li>
+                            <li><a href="LAB2/diffColorLines.html" target="_blank">7 rainbow lines </a></li>
+                            <li><a href="LAB2/maharastra.html" target="_blank">Maharastra </a></li>
+                            <li><a href="LAB2/My_City.html" target="_blank">Pondicherry </a></li>  
+                        </ol> <hr>    
+                    </div>
 
-    <ul>
-        <li>Lab Day 3 (Assesment 2)</li>
-        <ol type="1">
-            <li><a href="LAB2/DEPARTMENTALSTORE.HTML" target="_blank">Departmental store form </a></li>
-            <li><a href="LAB2/diffColorLines.html" target="_blank">7 rainbow lines </a></li>
-            <li><a href="LAB2/maharastra.html" target="_blank">Maharastra </a></li>
-            <li><a href="LAB2/My_City.html" target="_blank">Pondicherry </a></li>
-        </ol>
-    </ul>
+                    <li><button class="tog">Lab Day 4 (Assesment 3)</button></li><hr>   
+                    <div class="hiddenDiv2" style="display: none;">
+                        <ol type="1">
+                            <li><a href="LAB3/REG_FORM.HTML" target="_blank">Form Validation </a></li>
+                            </ol> <hr>    
+                    </div>
+                    <li><button class="tog">Lab Day 6 (Assesment 5)</button></li><hr>   
+                    <div class="hiddenDiv2" style="display: none;">
+                        <ol type="1">
+                            <li><a href="LAB3/REG_FORM.HTML" target="_blank">Form with backend</a></li>
+                            </ol> <hr>    
+                    </div>
+                </ul>
+
     
+    
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const tog = document.querySelectorAll(".tog");
+            const hiddenDiv2 = document.querySelectorAll(".hiddenDiv2");
+
+            tog.forEach((button, index)=> {
+                button.addEventListener("click", function () {
+                    if(hiddenDiv2[index].style.display === "none"){
+                        hiddenDiv2[index].style.display = "block";
+                    }
+                    else{
+                        hiddenDiv2[index].style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+            
 </body>
 </html>
