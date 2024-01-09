@@ -1,15 +1,15 @@
 <?php 
 session_start();
 
-// if (!isset($_SESSION['flname'])) {
-//     $_SESSION['mgs'] = "You must Log in First";
-//     header('location: login.php');
-// }
-// if (isset($_GET['logout'])) {
-//     session_destroy();
-//     unset($_SESSION['flname']);
-//     header('location: login.php');
-// }
+if (!isset($_SESSION['flname'])) {
+    $_SESSION['mgs'] = "You must Log in First";
+    header('location: login.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['flname']);
+    header('location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
