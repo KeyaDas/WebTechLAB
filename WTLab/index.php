@@ -39,7 +39,7 @@ if (isset($_GET['logout'])) {
         <?php if(isset($_SESSION['flname'])) : ?>
             <p>Welcome <strong><?php echo $_SESSION['flname']; ?> </p>
             <p>Welcome to my project page</p>
-            <!-- <p><strong> <a href="index.php?logout='1'" style="color: red;" >logout </a></strong></p> -->
+            <p><strong> <a href="index.php?logout='1'" style="color: red;" >logout </a></strong></p>
         <?php endif ?>
     </div>
     
